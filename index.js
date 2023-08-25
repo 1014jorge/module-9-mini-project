@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = ({ name, location, github, linkedin }) => {
+const generateHTML = ({ name, location, hobby, food, github, linkedin }) => {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -17,8 +17,11 @@ const generateHTML = ({ name, location, github, linkedin }) => {
                 <p class="lead">I am from ${location} .</p>
                 <h3>Contact Me</h3>
                 <ul class="list-group">
+                <li class="list-group-item">My Favorite hobby is ${hobby}</li>
+                <li class="list-group-item">My Favorite food is ${food}</li>
                     <li class="list-group-item">My GitHub user name is ${github} </li>
-                    <li class="list-group-item">LinkedIn: ${linkedin} </li>
+                    <li class="list-group-item">My LinkedIn URL is ${linkedin} </li>
+                   
                 </ul>
             </div>
         </header>
